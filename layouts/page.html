@@ -1,10 +1,18 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
 
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+<h1>{{ site.title }}</h1>
 
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+<p>
+    {{ site.params.course.description }}
+</p>
+
+<h2>Course Information</h2>
+
+<ul>
+    <li>Professor: {{ site.params.professor.name }}</li>
+    <li>Semester: {{ site.params.course.semester }}</li>
+    <li>Sala: {{ site.params.course.room }}</li>
+    <li>Sala de aula virtual: {{ site.params.course.virtual_room }}</li>
+</ul>
+
 {{ end }}
