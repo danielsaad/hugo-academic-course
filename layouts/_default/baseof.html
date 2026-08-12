@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>
-        {{ if .title }}
-            {{ .title }} | {{ site.title }}
-        {{ else }}
-            {{ site.title }}
-        {{ end }}
-    </title>
+    {{ partial "head.html" . }}
 </head>
 
 <body>
+    {{ partial "header.html" . }}
 
-<header>
-    <h1>{{ site.title }}</h1>
-</header>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
 
-<main>
-    {{ block "main" . }}{{ end }}
-</main>
-
+    {{ partial "footer.html" . }}
 </body>
 </html>
