@@ -1,0 +1,17 @@
+{{ define "main" }}
+<main class="container text-center py-5">
+    <h1>404 - Ops!</h1>
+    
+    <div style="margin: 20px 0;">
+        <img src="{{ "images/obi-wan.jpg" | relURL }}" alt="Not the droids you're looking for" style="max-width: 100%; height: auto; max-height: 400px; border-radius: 8px;">
+    </div>
+
+    <p style="font-style: italic; font-size: 1.2rem;">"Estes não são os droids que você está procurando."</p>
+    
+    <p>Parece que o link que você acessou não existe ou foi movido.</p>
+    
+    <p>
+        <a href="{{ "" | relURL }}" class="btn btn-primary">Retornar para a Página Inicial</a>
+    </p>
+</main>
+{{ end }}
