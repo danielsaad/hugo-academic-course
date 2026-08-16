@@ -2,6 +2,33 @@
 
 <h1>{{ site.Title }}</h1>
 
-<p>Bem-vindo à página da disciplina.</p>
+<!-- <section class="course-info">
+    <h2>Informações da disciplina</h2>
+
+    <dl>
+        <dt>Código</dt>
+        <dd>{{ site.Params.course.code }}</dd>
+
+        <dt>Semestre</dt>
+        <dd>{{ site.Params.course.semester }}</dd>
+
+        <dt>Sala</dt>
+        <dd>{{ site.Params.course.room }}</dd>
+
+        <dt>Professor</dt>
+        <dd>{{ site.Params.professor.name }}</dd>
+
+        <dt>Sala virtual</dt>
+        <dd>
+            <a href="{{ site.Params.course.virtual_room }}">
+                Link
+            </a>
+        </dd>
+    </dl>
+</section> -->
+<section class="course-description">
+    {{ .Content }}
+</section>
+
 
 {{ end }}
